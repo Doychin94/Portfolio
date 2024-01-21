@@ -6,6 +6,9 @@
 	--c-white:  #fff;
 	--c-black:  #000;
 	--c-grey:  #636363;
+	--c-light-blue:  #DEE3EF;
+	--c-dark:  #222222;
+	--c-orange:  #EE5F38;
 
 	 --f-family-heebo: "Heebo", sans-serif;
 	 --f-family-rubik: "Rubik", sans-serif;
@@ -23,7 +26,6 @@ html {
 *, *:before, *:after {
   box-sizing: border-box;
 }
-
 
 body {
 	min-width: 320px;
@@ -112,10 +114,157 @@ a:hover {
 	color: currentColor;
 }
 
-/*  Shell  */
+/* ------------------------------------------------------------ *\
+	Wrapper
+\* ------------------------------------------------------------ */
+
+.wrapper {
+	min-height: 100vh;
+	min-height: 100dvh;
+}
+
+/* ------------------------------------------------------------ *\
+		Shell
+\* ------------------------------------------------------------ */
 
 .shell {
 	max-width: 116.2rem;
 	margin: 0 auto;
 	padding: 0 1.5rem;
 }
+
+/* ------------------------------------------------------------ *\
+	Button
+\* ------------------------------------------------------------ */
+
+.btn {
+	display: inline-block;
+	vertical-align: middle;
+	text-align: center;
+	appearance:  none;
+	text-decoration: none;
+	padding: 1rem 3rem;
+	border-radius: 2rem;
+	background-color: var(--c-orange);
+	border: .1rem solid;
+	border-color: var(--c-orange);
+	color: var(--c-white);
+	font-size: 2.4rem;
+	font-weight: 600;
+	line-height: 1.2;
+	transition: border-color .3s, background-color .3s ease-in-out;
+}
+
+/* btn ico */
+
+.btn--ico {
+	display: inline-flex;
+	grid-gap: 1rem;
+	justify-content: center;
+	align-items: center;
+}
+
+/* ------------------------------------------------------------ *\
+		Header
+\* ------------------------------------------------------------ */
+
+.header {
+	padding: 5rem 0;
+	position: sticky;
+	top: 0; 
+	left: 0; 
+	width: 100%; 
+	background-color: var(--c-light-blue); 
+	transform: translateZ(1px);
+	transition: padding .3s ;
+}
+
+.header__blur {
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(var(--c-light-blue), .5);
+	backdrop-filter: blur(.8rem);
+	-webkit-backdrop-filter: blur(.8rem);
+	z-index: 10;
+	transform: translateZ(1px);
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity $t-duration $t-duration;
+}
+
+.header .header__inner {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	grid-gap: 2rem;
+}
+
+.header .header__aside {
+	display: flex;
+	align-items: center;
+	grid-gap: 2rem;
+	width: 100%;
+	max-width: 70%;
+}
+
+/* ------------------------------------------------------------ *\
+	Nav
+\* ------------------------------------------------------------ */
+
+.nav {
+	font-size: 1.9rem;
+	line-height: 1.2;
+	color: #222222;
+}
+
+.nav > ul {
+	display: flex;
+	list-style-type: none;
+	grid-gap: 2rem;
+}
+
+.nav > ul > li > a {
+	position: relative;
+	text-decoration: none;
+	transition: color .3s ease-in-out;
+}
+
+.nav > ul > li > a:before {
+	content: '';
+	display: inline-block;
+	position: absolute;
+	top: calc(100% + .5rem);
+	left: 0;
+	width: 0;
+	height: .1rem;
+	transition: width .3s ease-in-out;
+}
+
+@media(hover: hover) {
+	.nav > ul > li > a:hover {
+		color: var(--c-orange);
+	}
+
+	.nav > ul > li > a:before:hover {
+		width: 100%;
+	}
+}
+
+/* ------------------------------------------------------------ *\
+	Logo
+\* ------------------------------------------------------------ */
+
+.logo {
+	display: inline-block;
+	width: 100%;
+	max-width: 15.7rem;
+}
+
+.logo img {
+	width: 100%; 
+}
+
