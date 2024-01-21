@@ -25,10 +25,13 @@ html {
 
 *, *:before, *:after {
   box-sizing: border-box;
+  margin: 0; 
+  padding: 0; 
 }
 
 body {
 	min-width: 320px;
+	margin: 0; 
 	background: var(--c-white);
 	font-family: var(--f-family-rubik);
 	font-weight: 400;
@@ -143,8 +146,8 @@ a:hover {
 	text-align: center;
 	appearance:  none;
 	text-decoration: none;
-	padding: 1rem 3rem;
-	border-radius: 2rem;
+	padding: 1rem 1.5rem;
+	border-radius: 3rem;
 	background-color: var(--c-orange);
 	border: .1rem solid;
 	border-color: var(--c-orange);
@@ -160,8 +163,15 @@ a:hover {
 .btn--ico {
 	display: inline-flex;
 	grid-gap: 1rem;
+	font-size: 1.8rem;
+	font-weight: 500;
 	justify-content: center;
 	align-items: center;
+}
+
+.btn--ico i {
+	position: relative;
+	top: .2rem;
 }
 
 /* ------------------------------------------------------------ *\
@@ -169,7 +179,7 @@ a:hover {
 \* ------------------------------------------------------------ */
 
 .header {
-	padding: 5rem 0;
+	padding: 5rem 0 2rem;
 	position: sticky;
 	top: 0; 
 	left: 0; 
@@ -177,6 +187,10 @@ a:hover {
 	background-color: var(--c-light-blue); 
 	transform: translateZ(1px);
 	transition: padding .3s ;
+}
+
+.header__shell {
+	max-width: 120rem;
 }
 
 .header__blur {
@@ -206,9 +220,21 @@ a:hover {
 .header .header__aside {
 	display: flex;
 	align-items: center;
-	grid-gap: 2rem;
-	width: 100%;
-	max-width: 70%;
+	grid-gap: 4.3rem;
+	margin-top: -.8rem; 
+}
+
+/* is sticky */
+
+.header.is-sticky {
+	padding: 1rem 0;
+	background-color: #dee3ef69;
+	backdrop-filter: blur(.8rem);
+	-webkit-backdrop-filter: blur(.8rem);
+}
+
+.header.is-sticky .header__blur {
+	/*opacity: 1;*/
 }
 
 /* ------------------------------------------------------------ *\
@@ -224,7 +250,7 @@ a:hover {
 .nav > ul {
 	display: flex;
 	list-style-type: none;
-	grid-gap: 2rem;
+	grid-gap: 3.8rem;
 }
 
 .nav > ul > li > a {
@@ -237,10 +263,11 @@ a:hover {
 	content: '';
 	display: inline-block;
 	position: absolute;
-	top: calc(100% + .5rem);
+	top: calc(100% + .1rem);
 	left: 0;
 	width: 0;
 	height: .1rem;
+	background-color: var(--c-orange);
 	transition: width .3s ease-in-out;
 }
 
@@ -249,7 +276,7 @@ a:hover {
 		color: var(--c-orange);
 	}
 
-	.nav > ul > li > a:before:hover {
+	.nav > ul > li > a:hover:before {
 		width: 100%;
 	}
 }

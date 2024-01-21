@@ -1,9 +1,11 @@
-// import handleStickyHeader from './modules/handle-sticky-header.js'
-
+/**
+ * Handle sticky header
+ */
+export default function handleStickyHeader() {
 const $header = $('.js-header');
 
-
 $(window).on('load scroll resize', function(evt) {
+	console.log('test')
 	if ($(this).scrollTop() > 0) {
 		$header.addClass('is-sticky');
 		return;
@@ -11,3 +13,4 @@ $(window).on('load scroll resize', function(evt) {
 
 	$header.removeClass('is-sticky')
 })
+},()
