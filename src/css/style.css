@@ -7,6 +7,7 @@
 	--c-black:  #000;
 	--c-grey:  #636363;
 	--c-light-blue:  #DEE3EF;
+	--c-blue:  #000248;
 	--c-dark:  #222222;
 	--c-orange:  #EE5F38;
 
@@ -66,7 +67,6 @@ h4 {
 	font-family: var(--f-family-heebo);
 	font-size: 2.5rem;
 	line-height: 1.4;
-
 }
 
 .h5,
@@ -74,7 +74,6 @@ h5 {
 	font-family: var(--f-family-heebo);
 	font-size: 2.4rem;
 	line-height: 1.2;
-
 }
 
 .h6,
@@ -85,6 +84,9 @@ h6 {
 	line-height: 1.5;
 }
 
+img {
+	height: auto;
+}
 
 h1[class],
 h2[class],
@@ -124,6 +126,7 @@ a:hover {
 .wrapper {
 	min-height: 100vh;
 	min-height: 100dvh;
+	overflow: hidden;
 }
 
 /* ------------------------------------------------------------ *\
@@ -179,7 +182,7 @@ a:hover {
 \* ------------------------------------------------------------ */
 
 .header {
-	padding: 5rem 0 2rem;
+	padding: 3rem 0 2rem;
 	position: sticky;
 	top: 0; 
 	left: 0; 
@@ -295,3 +298,111 @@ a:hover {
 	width: 100%; 
 }
 
+/* ------------------------------------------------------------ *\
+	Hero
+\* ------------------------------------------------------------ */
+.hero {
+	padding: 5rem 0;
+}
+
+.hero .hero__inner {
+	display: flex;
+	align-items: center;
+	grid-gap: 5.2rem;
+}
+
+.hero .hero__aside {
+	position: relative;
+	width: 47.6rem;
+	max-width: 47.6rem;
+}
+
+.hero .hero__content {
+	flex: 1;
+}
+
+.hero .hero__image {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	z-index: 5;
+}
+
+.hero .hero__image img {
+	width: 100%;
+	object-fit: cover;
+}
+
+.hero .hero__logo {
+	position: absolute;
+	top: 17rem;
+	left: -3rem;
+	z-index: 10;
+	width: 9rem;
+	max-width: 9rem;
+}
+
+.hero .hero__logo--second {
+	left: unset;
+	right: 0;
+	top: 37rem;
+}
+
+.hero .hero__logo img {
+	width: 100%;
+}
+
+.hero .hero__label {
+	position: absolute;
+	bottom: 3rem;
+	right: -4rem;
+	z-index: 10;
+}
+
+.hero .hero__sub-title {
+	font-family: var(--f-family-rubik);
+	font-size: 24px;
+	font-style: italic;
+	font-weight: 500;
+	color: var(--c-orange);
+	margin-bottom: 2rem;
+}
+
+.hero h1 {
+	color: var(--c-blue);
+	margin-bottom: 1rem; 
+}
+
+/* ------------------------------------------------------------ *\
+	Label
+\* ------------------------------------------------------------ */
+
+.label {
+	padding: 1rem 2.7rem 1rem 2.7rem;
+	display: inline-flex;
+	grid-gap: 1.8rem;
+	align-items: center;
+	background-color: var(--c-white);
+	-webkit-box-shadow: 0px 0px 47px -11px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 47px -11px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 47px -11px rgba(0,0,0,0.75);
+	border-radius: 5rem;
+	font-size: 1.7rem;
+	font-weight: 600;
+	font-family: var(--f-family-heebo);
+}
+
+.label h4 {
+	font-family: var(--f-family-rubik);
+	font-weight: 500;
+	font-size: 2.6rem;
+	margin-bottom: 0;
+	line-height: 1.1;
+	color: #333;
+}
+
+.label .label__ico {
+	position: relative;
+    top: 0.4rem;
+}
