@@ -15,7 +15,6 @@
 	 --f-family-rubik: "Rubik", sans-serif;
 }
 
-
 /* ------------------------------------------------------------ *\
 	Base
 \* ------------------------------------------------------------ */
@@ -175,6 +174,14 @@ a:hover {
 .btn--ico i {
 	position: relative;
 	top: .2rem;
+}
+
+/* btn plain */
+
+.btn--plain {
+	background-color: transparent;
+	font-weight: 500;
+	color: var(--c-orange);
 }
 
 /* ------------------------------------------------------------ *\
@@ -360,18 +367,67 @@ a:hover {
 	z-index: 10;
 }
 
+.hero .hero__content {
+	font-size: 2rem;
+}
+
 .hero .hero__sub-title {
 	font-family: var(--f-family-rubik);
-	font-size: 24px;
+	font-size: 2.4rem;
+	text-transform: uppercase;
 	font-style: italic;
 	font-weight: 500;
 	color: var(--c-orange);
-	margin-bottom: 2rem;
+	margin-bottom: 0;
 }
 
 .hero h1 {
 	color: var(--c-blue);
 	margin-bottom: 1rem; 
+	line-height: 1.1;
+}
+
+.hero h3 {
+	font-weight: 400;
+	margin-bottom: 1rem; 
+}
+
+.hero .hero__actions {
+	margin-top: 2rem; 
+	display: flex;
+	align-items: center;
+	grid-gap: 4rem;
+}
+
+.hero .hero__actions-content {
+	display: flex;
+	align-items: center;
+	grid-gap: 1.5rem;
+}
+
+/* ------------------------------------------------------------ *\
+	Socials
+\* ------------------------------------------------------------ */
+
+.socials ul {
+	list-style-type: none;
+	display: flex;
+	grid-gap: 1rem;
+}
+
+.socials ul li {
+	position: relative;
+	top: .2rem;
+}
+
+.socials ul li a {
+	transition: filter .3s ease-in-out;
+}
+
+@media(hover: hover) {
+	.socials ul li a:hover {
+		filter: grayscale(100%);
+	}
 }
 
 /* ------------------------------------------------------------ *\
