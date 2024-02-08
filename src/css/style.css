@@ -216,11 +216,12 @@ a:hover {
 
 .header {
 	padding: 3rem 0 2rem;
-	position: sticky;
+	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
-	background-color: var(--c-light-blue);
+	z-index: 100;
+	background-color: transparent;
 	transform: translateZ(1px);
 	transition: padding .3s ;
 }
@@ -335,7 +336,23 @@ a:hover {
 	Hero
 \* ------------------------------------------------------------ */
 .hero {
-	padding: 5rem 0;
+	padding: 15rem 0;
+	position: relative;
+	background-color: var(--c-light-blue);
+}
+
+.hero .hero__decoration {
+	position: absolute;
+	top: -10.8rem;
+	right: 0;
+	pointer-events: none;
+}
+
+.hero .hero__decoration--alt {
+	top: unset;
+	bottom: 0;
+	right: unset;
+	left: 0;
 }
 
 .hero .hero__inner {
@@ -470,6 +487,7 @@ a:hover {
 	border-radius: 1rem;
 	min-width: 16rem;
 	text-align: center;
+	/*transition: opacity .3s ease-in-out;*/
 }
 
 .tooltip:before {
@@ -483,16 +501,11 @@ a:hover {
 	border-color: transparent transparent var(--c-orange);
 }
 
-.tooltip a {
-	transition: opacity .3s ease-in-out;
-}
-
-@media(hover: hover) {
-	.tooltip a:hover {
+/*@media(hover: hover) {
+	.tooltip:hover {
 		opacity: .8;
 	}
-}
-
+}*/
 
 /* ------------------------------------------------------------ *\
 	Socials
