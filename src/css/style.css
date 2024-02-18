@@ -138,6 +138,20 @@ a:hover {
 }
 
 /* ------------------------------------------------------------ *\
+	Animations
+\* ------------------------------------------------------------ */
+
+@keyframes float {
+	0%,100% {
+		transform: translate(0, 0);
+	}
+
+	50% {
+		transform: translate(-10%, 0);
+	}
+}
+
+/* ------------------------------------------------------------ *\
 	Button
 \* ------------------------------------------------------------ */
 
@@ -391,12 +405,14 @@ a:hover {
 	z-index: 10;
 	width: 9rem;
 	max-width: 9rem;
+	animation: float 5s infinite normal;
 }
 
 .hero .hero__badge--second {
 	left: unset;
 	right: -3rem;
 	top: 37rem;
+	animation: float 5s 1s infinite normal;
 }
 
 .hero .hero__badge img {
