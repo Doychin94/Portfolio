@@ -10,6 +10,9 @@
 	--c-blue:  #000248;
 	--c-dark:  #222222;
 	--c-orange:  #EE5F38;
+	--c-green:  #48CDA0;
+
+	--t-duration: .4s;
 
 	 --f-family-heebo: "Heebo", sans-serif;
 	 --f-family-rubik: "Rubik", sans-serif;
@@ -579,4 +582,105 @@ a:hover {
 .label .label__ico {
 	position: relative;
     top: 0.4rem;
+}
+
+/* ------------------------------------------------------------ *\
+	Section White
+\* ------------------------------------------------------------ */
+
+.section-white {
+	background-color: var(--c-white);
+	padding: 5rem 0;
+}
+
+.section-white .section__head {
+	width: 53rem;
+	margin-bottom: 8rem;
+}
+
+
+.section-white .section__head h5 {
+	color: var(--c-orange);
+	margin-bottom: 1rem;
+}
+
+
+/* ------------------------------------------------------------ *\
+	Cards
+\* ------------------------------------------------------------ */
+
+.cards {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);;
+	gap: 2rem;
+}
+
+/* ------------------------------------------------------------ *\
+	card
+\* ------------------------------------------------------------ */
+
+.card {
+	background-color: transparent;
+	padding: 5rem 3rem 8rem;
+	position: relative;
+	font-weight: 700;
+	border-radius: .8rem;
+	transition: box-shadow var(--t-duration) ease-in-out;
+}
+
+.card:hover {
+	-webkit-box-shadow: 0px 0px 60px 20px rgba(0,0,0,0.12);
+	-moz-box-shadow: 0px 0px 60px 20px rgba(0,0,0,0.12);
+	box-shadow: 0px 0px 60px 20px rgba(0,0,0,0.12);
+}
+
+.card .card__main-link {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+}
+
+.card .card__ico-wrapper {
+	margin-bottom: 3rem;
+}
+
+.card h5 {
+	margin-bottom: .8rem;
+	color: #333;
+}
+
+.card .card__link {
+	position: absolute;
+	bottom: 3rem;
+	left: 3rem;
+	padding-left: 1rem;
+	display: inline-block;
+	color: var(--c-green);
+}
+
+.card .card__link::before {
+	content: '';
+	position: absolute;
+	top: .5rem;
+	left: 0;
+	width: .6rem;
+	height: .6rem;
+	background-color: currentColor;
+}
+
+/* ------------------------------------------------------------ *\
+	ico-wrapper
+\* ------------------------------------------------------------ */
+
+.ico-wrapper {
+	display: inline-flex;
+	width: 9.3rem;
+	height: 9.3rem;
+	border-radius: 100%;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--c-green);
 }
