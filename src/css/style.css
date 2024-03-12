@@ -589,18 +589,18 @@ a:hover {
 	Section White
 \* ------------------------------------------------------------ */
 
-.section-white {
+.section-primary {
 	background-color: var(--c-white);
 	padding: 5rem 0;
 }
 
-.section-white .section__head {
+.section-primary .section__head {
 	width: 53rem;
 	margin-bottom: 8rem;
 }
 
 
-.section-white .section__head h5 {
+.section-primary .section__head h5 {
 	color: var(--c-orange);
 	margin-bottom: 1rem;
 }
@@ -684,4 +684,50 @@ a:hover {
 	justify-content: center;
 	align-items: center;
 	background-color: var(--c-green);
+}
+
+/* ------------------------------------------------------------ *\
+	bar
+\* ------------------------------------------------------------ */
+
+.bar h6 {
+	font-size: 1.8rem;
+	margin-bottom: .5rem;
+}
+
+.bar .bar__range {
+	padding: .1rem;
+	background-color: #DEE3EF;
+	border-radius: 1.4rem;
+}
+
+.bar .bar__score {
+	position: relative;
+	background-color: var(--c-orange);
+	border-radius: 1.4rem;
+	height: .8rem;
+}
+
+.bar .bar__label {
+	position: absolute;
+	top: -5rem;
+	right: 1rem;
+	border-radius: .4rem;
+	background-color: var(--c-orange);
+	color: var(--c-white);
+	min-width: 4rem;
+	padding: .6rem;
+	font-size: 1.4rem;
+	font-weight: 700;
+}
+
+.bar .bar__label:before {
+	content: '';
+	display: inline-block;
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	transform: translateX(-50%);
+	border: 1rem solid;
+	border-color: var(--c-orange) transparent transparent;
 }
