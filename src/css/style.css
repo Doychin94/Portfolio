@@ -725,9 +725,10 @@ a:hover {
 	content: '';
 	display: inline-block;
 	position: absolute;
-	top: 100%;
+	top: 99%;
 	left: 50%;
 	transform: translateX(-50%);
-	border: 1rem solid;
-	border-color: var(--c-orange) transparent transparent;
+	width: .9rem;
+	height: .8rem;
+	background-image: url('../assets/images/svg/triangle.svg');
 }
