@@ -11,6 +11,7 @@
 	--c-dark:  #222222;
 	--c-orange:  #EE5F38;
 	--c-green:  #48CDA0;
+	--c-pink:  #EDBCDC;
 
 	--t-duration: .4s;
 
@@ -152,6 +153,20 @@ a:hover {
 
 	50% {
 		transform: translate(-10%, 0);
+	}
+}
+
+@keyframes drop {
+	0% {
+		transform: translateY(10%);
+	}
+
+	50% {
+		transform: translateY(-10%);
+	}
+
+	100% {
+		transform: translateY(0);
 	}
 }
 
@@ -595,21 +610,58 @@ a:hover {
 }
 
 .section-primary .section__head {
-	width: 53rem;
+	max-width: 53rem;
 	margin-bottom: 8rem;
 }
-
 
 .section-primary .section__head h5 {
 	color: var(--c-orange);
 	margin-bottom: 1rem;
 }
 
+/* ------------------------------------------------------------ *\
+	Section secondary
+\* ------------------------------------------------------------ */
+.section-secondary {
+	background-color: var(--c-light-blue);
+	padding: 5rem 0;
+}
+
+
+.section-secondary .section__inner {
+	display: flex;
+	gap: 3rem;
+	align-items: center;
+}
+
+.section-secondary .section__content {
+	width: 50rem;
+	max-width: 50rem;
+}
+
+.section-secondary .section__aside {
+	flex: 1;
+}
+
+.section-secondary .section__bar {
+	max-width: 90%;
+	margin-bottom: 8rem;
+}
+
+.section-secondary .section__bar h5 {
+	color: var(--c-orange);
+	margin-bottom: 1rem;
+}
+
+.section-secondary .section__bar + h5 {
+	color: var(--c-orange);
+	margin-bottom: 3rem;
+	text-transform: uppercase;
+}
 
 /* ------------------------------------------------------------ *\
 	Cards
 \* ------------------------------------------------------------ */
-
 .cards {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);;
@@ -619,7 +671,6 @@ a:hover {
 /* ------------------------------------------------------------ *\
 	card
 \* ------------------------------------------------------------ */
-
 .card {
 	background-color: transparent;
 	padding: 5rem 3rem 8rem;
@@ -687,9 +738,17 @@ a:hover {
 }
 
 /* ------------------------------------------------------------ *\
+	bars
+\* ------------------------------------------------------------ */
+.bars {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 20%;
+}
+
+/* ------------------------------------------------------------ *\
 	bar
 \* ------------------------------------------------------------ */
-
 .bar h6 {
 	font-size: 1.8rem;
 	margin-bottom: .5rem;
@@ -731,4 +790,99 @@ a:hover {
 	width: .9rem;
 	height: .8rem;
 	background-image: url('../assets/images/svg/triangle.svg');
+}
+
+/* ------------------------------------------------------------ *\
+	Projects
+\* ------------------------------------------------------------ */
+
+.projects {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 5rem;
+}
+
+/* ------------------------------------------------------------ *\
+	Project
+\* ------------------------------------------------------------ */
+.project {
+	overflow: hidden;
+	aspect-ratio: 375 / 315;
+	position: relative;
+	padding: 0 2rem;
+	display: flex;
+	flex-direction: column-reverse;
+	background-color: var(--c-pink);
+	border-radius: .8rem;
+}
+
+.project .project__link {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+}
+
+.project .project__image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	z-index: 2;
+	transition: opacity var(--t-duration) ease-in-out;
+}
+
+.project .project__image:before {
+	content: '';
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 5;
+	background-color: var(--c-black);
+	opacity: 0;
+	transition: opacity var(--t-duration) ease-in-out;
+}
+
+.project .project__image img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.project .project__content {
+	position: relative;
+	z-index: 10;
+	color: var(--c-white);
+	display: grid;
+	grid-template-rows: 0fr;
+	transition: grid-template-rows var(--t-duration) ease-in-out;
+}
+
+.project .project__entry {
+	overflow: hidden;
+	transition: padding var(--t-duration) ease-in-out;
+}
+
+.project:hover .project__image {
+	opacity: 1;
+}
+
+.project:hover .project__image:before {
+	opacity: .2;
+}
+
+.project:hover .project__content {
+	grid-template-rows: 1fr;
+	animation: drop .3s .3s;
+}
+
+.project:hover .project__entry {
+	padding: 2rem 0;
 }
