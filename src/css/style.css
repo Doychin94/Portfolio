@@ -204,6 +204,12 @@ a:hover {
 	}
 }
 
+/* btn large */
+
+.btn--large {
+	padding: 1.1rem 3.2rem;
+}
+
 /* btn ico */
 
 .btn--ico {
@@ -586,7 +592,7 @@ a:hover {
 }
 
 /* ------------------------------------------------------------ *\
-	Section White
+	Section primary
 \* ------------------------------------------------------------ */
 
 .section-primary {
@@ -595,7 +601,7 @@ a:hover {
 }
 
 .section-primary .section__head {
-	width: 53rem;
+	max-width: 53rem;
 	margin-bottom: 8rem;
 }
 
@@ -605,6 +611,113 @@ a:hover {
 	margin-bottom: 1rem;
 }
 
+/* ------------------------------------------------------------ *\
+	Section secondary
+\* ------------------------------------------------------------ */
+
+.section-secondary {
+	background-color: var(--c-light-secondary);
+	padding: 10rem 0;
+}
+
+.section-secondary .section__inner {
+	display: flex;
+	gap: 2rem;
+}
+
+.section-secondary .section__content {
+	flex: 0 0 50%;
+	max-width: 50%;
+} 
+
+.section-secondary .section__aside {
+	flex: 0 0 50%;
+	max-width: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	gap: 4rem;
+	align-items: center;
+}
+
+.section-secondary .section__bar {
+	max-width: 53rem;
+	margin-bottom: 8rem;
+}
+
+.section-secondary .section__subtitle {
+	text-transform: uppercase;
+	color: var(--c-orange);
+	margin-bottom: 2.6rem;
+}
+
+.section-secondary .section__bar h5 {
+	color: var(--c-orange);
+	margin-bottom: 1rem;
+}
+
+.section-secondary .section__list-bio {
+	margin-bottom: 9rem;
+}
+
+.section-secondary .section__image {
+	width: 100%;
+	max-width: 100%;
+	position: relative;
+	aspect-ratio: 522 / 549;
+	overflow: hidden;
+}
+
+.section-secondary .section__image img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+/* ------------------------------------------------------------ *\
+	count
+\* ------------------------------------------------------------ */
+
+.count .count__number {
+	font-size: 8rem;
+	color: var(--c-orange);
+	background-size: cover;
+	-webkit-background-clip: text;
+	background-clip: text;
+}
+
+/* ------------------------------------------------------------ *\
+	list bio
+\* ------------------------------------------------------------ */
+
+.list-bio {
+	list-style-type: none;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 4rem;
+	font-size: 1.7rem;
+}
+
+.list-bio li {
+	position: relative;
+	padding-left: 3rem;
+}
+
+.list-bio li:before {
+	content: '';
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 2rem;
+	height: 2rem;
+	background-image: url('../assets/images/svg/circle.svg');
+	background-repeat: no-repeat;
+	background-size: contain;
+}
 
 /* ------------------------------------------------------------ *\
 	Cards
