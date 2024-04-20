@@ -11,5 +11,8 @@
     "url": "git@github-Doychin94:Doychin94/Portfolio.git"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "countup.js": "^2.8.0"
+  }
 }
