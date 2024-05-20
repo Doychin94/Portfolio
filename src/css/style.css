@@ -12,9 +12,7 @@
 	--c-orange:  #EE5F38;
 	--c-green:  #48CDA0;
 	--c-pink:  #EDBCDC;
-
 	--t-duration: .4s;
-
 	 --f-family-heebo: "Heebo", sans-serif;
 	 --f-family-rubik: "Rubik", sans-serif;
 }
@@ -555,6 +553,7 @@ a:hover {
 .socials ul {
 	list-style-type: none;
 	display: flex;
+	align-items: center;
 	grid-gap: 1rem;
 }
 
@@ -572,6 +571,15 @@ a:hover {
 		filter: grayscale(100%);
 	}
 }
+
+/*
+	socials adjust
+*/
+
+.socials--adjust ul {
+	grid-gap: 2rem;
+}
+
 
 /* ------------------------------------------------------------ *\
 	Label
@@ -630,7 +638,7 @@ a:hover {
 \* ------------------------------------------------------------ */
 
 .section-secondary {
-	background-color: var(--c-light-secondary);
+	background-color: var(--c-light-blue);
 	padding: 10rem 0;
 }
 
@@ -969,4 +977,60 @@ a:hover {
 
 .project:hover .project__entry {
 	padding: 2rem 0;
+}
+
+/* ------------------------------------------------------------ *\
+	List logos
+\* ------------------------------------------------------------ */
+.list-logos {
+	list-style-type: none;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2rem 0;
+}
+
+.list-logos li {
+	width: 100%;
+	max-width: 25%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.list-logos li img {
+	width: 100%;
+}
+
+/* ------------------------------------------------------------ *\
+	Footer
+\* ------------------------------------------------------------ */
+.footer {
+	padding: 5rem 0;
+	background-color: var(--c-light-blue)
+}
+
+.footer .footer__inner {
+	display: flex;
+	gap: 2rem;
+	justify-content: space-between;
+	align-items: center;
+} 
+
+.footer .footer__nav {
+	list-style-type: none;
+	display: flex;
+	gap: 2rem;
+	font-weight: 700;
+	color: var(--c-black);
+	
+}
+
+.footer .footer__nav a {
+	text-decoration: none;
+	line-height: 1.2;
+	transition: color var(--t-duration) ease-in-out;
+}
+
+.footer .footer__nav a:hover {
+	color: var(--c-orange);
 }
