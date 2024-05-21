@@ -1159,11 +1159,29 @@ a:hover {
 }
 
 .footer .footer__nav a {
+	position: relative;
+	display: inline-block;
 	text-decoration: none;
 	line-height: 1.2;
 	transition: color var(--t-duration) ease-in-out;
 }
 
+.footer .footer__nav a:before {
+	content: '';
+	display: inline-block;
+	position: absolute;
+	top: calc(100% + .1rem);
+	left: 0;
+	width: 0;
+	height: .1rem;
+	background-color: var(--c-orange);
+	transition: width .3s ease-in-out
+}
+
 .footer .footer__nav a:hover {
 	color: var(--c-orange);
+}
+
+.footer .footer__nav a:hover:before {
+	width: 100%;
 }
