@@ -614,6 +614,20 @@ a:hover {
 		top: 0.4rem;
 }
 
+/*
+	label adjust
+*/
+.label--adjust {
+	padding: 1.1rem 2.7rem 0.9rem 2.7rem;
+	background-color: var(--c-orange);
+	box-shadow: none;
+	color: var(--c-white);
+	font-size: 1.3rem;
+	border-radius: 5.5rem;
+	text-transform: uppercase;
+
+}
+
 /* ------------------------------------------------------------ *\
 	Section primary
 \* ------------------------------------------------------------ */
@@ -631,6 +645,12 @@ a:hover {
 .section-primary .section__head h5 {
 	color: var(--c-orange);
 	margin-bottom: 1rem;
+}
+
+.section-primary .section__wrapper {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 10rem;
 }
 
 /* ------------------------------------------------------------ *\
@@ -829,6 +849,13 @@ a:hover {
 	background-color: var(--c-green);
 }
 
+/*
+	ico wrapper with orange background
+*/
+.ico-wrapper--orange {
+	background-color: var(--c-orange);
+}
+
 /* ------------------------------------------------------------ *\
 	bars
 \* ------------------------------------------------------------ */
@@ -1018,7 +1045,93 @@ a:hover {
 \* ------------------------------------------------------------ */
 
 .boxes {
-	
+	position: relative;
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 6rem;
+	padding-left: 3.6rem;
+}
+
+.boxes:before {
+	content: '';
+	display: inline-block;
+	position: absolute;
+	top: 2.8rem;
+	left: 0;
+	bottom: 0;
+	width: .2rem;
+	background-color: var(--c-orange);
+}
+
+/* ------------------------------------------------------------ *\
+	Box
+\* ------------------------------------------------------------ */
+.box {
+	position: relative;
+	display: flex;
+	align-items: flex-start;
+	gap: 2.1rem;
+	font-size: 1.7rem;
+}
+
+.box:before {
+	content: '';
+	display: inline-block;
+	position: absolute;
+	top: 2.8rem;
+	left: -4.3rem;
+	width: 1.6rem;
+	height: 1.6rem;
+	border-radius: 100%;
+	border: .1rem solid;
+	border-color: var(--c-orange);
+	background-color: var(--c-white); 
+}
+
+.box .box__ico-wrapper {
+	width: 100%;
+	max-width: 7.1rem;
+	aspect-ratio: 1;
+	height: auto;
+}
+
+.box .box__content {
+	flex: 1;
+}
+
+.box .box__bar {
+	display: flex;
+	align-items: center;
+	gap: 1.6rem;
+	margin-bottom: 2.3rem;
+}
+
+.box h5 {
+	text-transform: uppercase;
+	color: var(--c-dark);
+}
+
+.box .box__year {
+	font-size: 1.4rem;
+	display: inline-block;
+	position: relative;
+	padding-left: 1rem;
+	color: var(--c-orange);
+	margin-top: 2.8rem;
+	text-transform: uppercase;
+	font-weight: 600;
+}
+
+.box .box__year:before {
+	content: '';
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	transform: translateY(-50%);
+	width: .6rem;
+	height: .6rem;
+	background-color: var(--c-orange); 
 }
 
 /* ------------------------------------------------------------ *\
