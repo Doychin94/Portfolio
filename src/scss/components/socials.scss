@@ -1,0 +1,32 @@
+/* ------------------------------------------------------------ *\
+	socials
+\* ------------------------------------------------------------ */
+
+.socials {
+	ul {
+		list-style-type: none;
+		display: flex;
+		align-items: center;
+		grid-gap: 1rem;
+	}
+
+	ul li {
+		position: relative;
+		top: .2rem;
+	}
+
+	ul li a {
+		transition: filter .3s ease-in-out;
+
+		&:hover {
+			filter: grayscale(100%);
+		}
+	}
+}
+
+/* socials adjust */
+.socials--adjust ul {
+	grid-gap: 2rem;
+}
+
+

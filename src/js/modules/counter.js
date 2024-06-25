@@ -1,7 +1,4 @@
-/**
- * External dependencies.
- */
-import { CountUp } from '../../../node_modules/countup.js/dist/countUp.js';
+import { CountUp } from 'countup.js';
 
 /**
  * Init counters.
@@ -26,4 +23,4 @@ const initCounters = ($counter) => {
 	});
 };
 
-export { initCounters };
+initCounters($('.js-counter'))

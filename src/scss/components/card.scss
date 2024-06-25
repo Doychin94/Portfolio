@@ -1,0 +1,57 @@
+/* ------------------------------------------------------------ *\
+	card
+\* ------------------------------------------------------------ */
+
+.card {
+	background-color: transparent;
+	padding: 5rem 3rem 8rem;
+	position: relative;
+	font-weight: 700;
+	border-radius: .8rem;
+	transition: box-shadow var(--t-duration) ease-in-out;
+
+	&:hover {
+		-webkit-box-shadow: 0px 0px 60px 20px rgba(0,0,0,0.12);
+		-moz-box-shadow: 0px 0px 60px 20px rgba(0,0,0,0.12);
+		box-shadow: 0px 0px 60px 20px rgba(0,0,0,0.12);
+	}
+
+	.card__main-link {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		z-index: 10;
+	}
+
+	.card__ico-wrapper {
+		margin-bottom: 3rem;
+	}
+
+	h5 {
+		margin-bottom: .8rem;
+		color: #333;
+	}
+
+	.card__link {
+		position: absolute;
+		bottom: 3rem;
+		left: 3rem;
+		padding-left: 1rem;
+		display: inline-block;
+		color: var(--c-green);
+	}
+
+	.card__link::before {
+		content: '';
+		position: absolute;
+		top: .5rem;
+		left: 0;
+		width: .6rem;
+		height: .6rem;
+		background-color: currentColor;
+	}
+}
+
+

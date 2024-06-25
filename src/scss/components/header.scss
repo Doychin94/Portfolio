@@ -1,0 +1,59 @@
+/* ------------------------------------------------------------ *\
+	header
+\* ------------------------------------------------------------ */
+
+.header {
+	padding: 3rem 0 2rem;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 100;
+	background-color: transparent;
+	transform: translateZ(1px);
+	transition: padding .3s ;
+
+	.header__shell {
+		max-width: 120rem;
+	}
+
+	.header__blur {
+		display: inline-block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(var(--c-light-blue), .5);
+		backdrop-filter: blur(.8rem);
+		-webkit-backdrop-filter: blur(.8rem);
+		z-index: 10;
+		transform: translateZ(1px);
+		opacity: 0;
+		pointer-events: none;
+		transition: opacity var(--t-duration) var(--t-duration);
+	}
+
+	.header__inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		grid-gap: 2rem;
+	}
+
+	.header__aside {
+		display: flex;
+		align-items: center;
+		grid-gap: 4.3rem;
+		margin-top: -.8rem;
+	}
+
+	/* is sticky */
+
+	&.is-sticky {
+		padding: 1rem 0;
+		background-color: #dee3ef69;
+		backdrop-filter: blur(.8rem);
+		-webkit-backdrop-filter: blur(.8rem);
+	}
+}

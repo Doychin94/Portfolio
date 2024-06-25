@@ -1,0 +1,29 @@
+/* ------------------------------------------------------------ *\
+	list-bio
+\* ------------------------------------------------------------ */
+
+.list-bio {
+	list-style-type: none;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 4rem;
+	font-size: 1.7rem;
+
+	li {
+		position: relative;
+		padding-left: 3rem;
+	}
+
+	li:before {
+		content: '';
+		display: inline-block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 2rem;
+		height: 2rem;
+		background-image: url('../assets/images/svg/circle.svg');
+		background-repeat: no-repeat;
+		background-size: contain;
+	}
+}

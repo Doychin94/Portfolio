@@ -1,0 +1,72 @@
+/* ------------------------------------------------------------ *\
+	box
+\* ------------------------------------------------------------ */
+
+.box {
+	position: relative;
+	display: flex;
+	align-items: flex-start;
+	gap: 2.1rem;
+	font-size: 1.7rem;
+
+	&:before {
+		content: '';
+		display: inline-block;
+		position: absolute;
+		top: 2.8rem;
+		left: -4.3rem;
+		width: 1.6rem;
+		height: 1.6rem;
+		border-radius: 100%;
+		border: .1rem solid;
+		border-color: var(--c-orange);
+		background-color: var(--c-white);
+	}
+
+	.box__ico-wrapper {
+		width: 100%;
+		max-width: 7.1rem;
+		aspect-ratio: 1;
+		height: auto;
+	}
+
+	.box__content {
+		flex: 1;
+	}
+
+	.box__bar {
+		display: flex;
+		align-items: center;
+		gap: 1.6rem;
+		margin-bottom: 2.3rem;
+	}
+
+	h5 {
+		text-transform: uppercase;
+		color: var(--c-dark);
+	}
+
+	.box__year {
+		font-size: 1.4rem;
+		display: inline-block;
+		position: relative;
+		padding-left: 1rem;
+		color: var(--c-orange);
+		margin-top: 2.8rem;
+		text-transform: uppercase;
+		font-weight: 600;
+	}
+
+	.box__year:before {
+		content: '';
+		display: inline-block;
+		position: absolute;
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+		width: .6rem;
+		height: .6rem;
+		background-color: var(--c-orange);
+	}
+}
+

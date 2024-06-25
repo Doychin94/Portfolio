@@ -1,0 +1,28 @@
+/* ------------------------------------------------------------ *\
+	list-logos
+\* ------------------------------------------------------------ */
+
+.list-logos {
+	list-style-type: none;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2rem 0;
+
+	li {
+		width: 100%;
+		max-width: 25%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	li:not(:nth-child(1),:nth-child(5)) {
+		border-left: .1rem solid var(--c-light-blue);
+	}
+
+
+	li img {
+		max-width: 100%;
+	}
+}
+

@@ -1,11 +1,11 @@
 /**
- * Modules.
+ * SCSS.
  */
-import stickyHeader from "./modules/sticky-header.js";
-import bars from "./modules/bars.js";
-import { initCounters } from './modules/counter.js'
+import '/scss/style.scss';
 
-// Init Modules
-stickyHeader();
-bars();
-initCounters($('.js-counter'));
+/*
+ * Modules
+ */
+import './modules/bars'
+import './modules/counter'
+import './modules/sticky-header'

@@ -1,0 +1,22 @@
+/* ------------------------------------------------------------ *\
+	boxes
+\* ------------------------------------------------------------ */
+
+.boxes {
+	position: relative;
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 6rem;
+	padding-left: 3.6rem;
+
+	&:before {
+		content: '';
+		display: inline-block;
+		position: absolute;
+		top: 2.8rem;
+		left: 0;
+		bottom: 0;
+		width: .2rem;
+		background-color: var(--c-orange);
+	}
+}
