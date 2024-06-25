@@ -18,12 +18,10 @@
 		text-decoration: none;
 		transition: color .3s ease-in-out;
 
-		@media(hover:hover) {
+		&:hover {
 			color: var(--c-orange);
 		}
 	}
-
-	> ul > li > a:hover
 
 	> ul > li > a:before {
 		content: '';
@@ -37,14 +35,12 @@
 		transition: width .3s ease-in-out;
 	}
 
-	@media(hover: hover) {
-		> ul > li > a:hover {
-			color: var(--c-orange);
-		}
+	> ul > li > a:hover {
+		color: var(--c-orange);
+	}
 
-		> ul > li > a:hover:before {
-			width: 100%;
-		}
+	> ul > li > a:hover:before {
+		width: 100%;
 	}
 }
 

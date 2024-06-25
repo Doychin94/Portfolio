@@ -1,0 +1,32 @@
+/* ------------------------------------------------------------ *\
+	form
+\* ------------------------------------------------------------ */
+
+.form {
+	.form__row ~ .form__row {
+		margin-top: 4rem;
+	}
+
+	.form__cols {
+		display: flex;
+		margin: 0 -1rem;
+	}
+
+	.form__col {
+		width: 50%;
+		max-width: 50%;
+		padding: 0 1rem;
+	}
+
+	.form__actions {
+		margin-top: 5rem;
+	}
+
+	.form__btn {
+		border: none;
+		font-family: var(--f-family-heebo);
+		font-weight: 700;
+		padding: 1.4rem 2rem 1.2rem;
+		font-size: 2rem;
+	}
+}

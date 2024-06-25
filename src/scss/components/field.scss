@@ -1,0 +1,33 @@
+/* ------------------------------------------------------------ *\
+	field
+\* ------------------------------------------------------------ */
+
+.field {
+	display: block;
+	width: 100%;
+	background-color: var(--c-white);
+	border-radius: .8rem;
+	color: var(--c-black);
+	font-weight: 600;
+	height: 7rem;
+	padding: 1rem 3.4rem;
+	border: none;
+	transition: box-shadow var(--t-duration) ease-in-out;
+
+	&::placeholder {
+		color: #DEE3EF;
+	}
+
+	&:focus {
+		-webkit-box-shadow:  0 0 1.3rem 0 rgba(0,0,0,0.15);
+		-moz-box-shadow:  0 0 1.3rem 0 rgba(0,0,0,0.15);
+		box-shadow: 0 0 1.3rem 0 rgba(0,0,0,0.15);
+	}
+}
+
+/* textarea */
+.field--textarea {
+	padding: 3.1rem 3.4rem;
+	height: 20.4rem;
+	resize: none;
+}
